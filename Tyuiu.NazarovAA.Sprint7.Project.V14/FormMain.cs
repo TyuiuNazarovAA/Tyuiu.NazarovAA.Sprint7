@@ -22,5 +22,17 @@ namespace Tyuiu.NazarovAA.Sprint7.Project.V14
             FormGeneral formGeneral = new FormGeneral();
             formGeneral.ShowDialog();
         }
+
+        private void buttonHelp_NAA_Click(object sender, EventArgs e)
+        {
+            FormAppInfo formAppInfo = new FormAppInfo();
+            formAppInfo.ShowDialog();
+        }
+
+        private void buttonAuthorInfo_NAA_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
     }
 }

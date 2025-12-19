@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGeneral));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
@@ -38,15 +39,34 @@
             textBoxFromStation_NAA = new TextBox();
             textBoxToStation_NAA = new TextBox();
             panelInputAndOutput_NAA = new Panel();
-            splitter4 = new Splitter();
-            panelOutput_NAA = new Panel();
+            panelUserInterface_NAA = new Panel();
+            panelAddAndRemove_NAA = new Panel();
+            groupBoxRemoveRoute_NAA = new GroupBox();
+            buttonRemoveRoute_NAA = new Button();
+            labelRemoveTo_NAA = new Label();
+            textBoxRemoveNumber_NAA = new TextBox();
+            textBoxRemoveFrom_NAA = new TextBox();
+            labelRemoveFrom_NAA = new Label();
+            textBoxRemoveTo_NAA = new TextBox();
+            labelRemoveNumber_NAA = new Label();
+            groupBoxAddRoute_NAA = new GroupBox();
+            buttonAddRoute_NAA = new Button();
+            labelAddTime_NAA = new Label();
+            labelAddTo_NAA = new Label();
+            labelAddFrom_NAA = new Label();
+            labelAddNumber_NAA = new Label();
+            textBoxAddTime_NAA = new TextBox();
+            textBoxAddTo_NAA = new TextBox();
+            textBoxAddFrom_NAA = new TextBox();
+            textBoxAddNumber_NAA = new TextBox();
+            panelSearchAndDatabase_NAA = new Panel();
             groupBoxDatabase_NAA = new GroupBox();
             labelDatabasePath_NAA = new Label();
             textBoxDatabaseSource_NAA = new TextBox();
+            buttonSaveDatabaseFile_NAA = new Button();
             buttonDatabaseFile_NAA = new Button();
-            panelInput_NAA = new Panel();
             groupBoxInput_NAA = new GroupBox();
-            labelFiltration_NAA = new Label();
+            labelSort_NAA = new Label();
             comboBoxSort_NAA = new ComboBox();
             buttonSearch_NAA = new Button();
             labelTo_NAA = new Label();
@@ -67,10 +87,15 @@
             groupBoxOutputTable_NAA = new GroupBox();
             dataGridViewFilteredRoutes_NAA = new DataGridView();
             splitter3 = new Splitter();
+            toolTipGeneral = new ToolTip(components);
+            saveFileDialogRoutes = new SaveFileDialog();
             panelInputAndOutput_NAA.SuspendLayout();
-            panelOutput_NAA.SuspendLayout();
+            panelUserInterface_NAA.SuspendLayout();
+            panelAddAndRemove_NAA.SuspendLayout();
+            groupBoxRemoveRoute_NAA.SuspendLayout();
+            groupBoxAddRoute_NAA.SuspendLayout();
+            panelSearchAndDatabase_NAA.SuspendLayout();
             groupBoxDatabase_NAA.SuspendLayout();
-            panelInput_NAA.SuspendLayout();
             groupBoxInput_NAA.SuspendLayout();
             groupBoxInputTable_NAA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAllRoutes_NAA).BeginInit();
@@ -101,43 +126,232 @@
             // 
             // panelInputAndOutput_NAA
             // 
-            panelInputAndOutput_NAA.Controls.Add(splitter4);
-            panelInputAndOutput_NAA.Controls.Add(panelOutput_NAA);
-            panelInputAndOutput_NAA.Controls.Add(panelInput_NAA);
+            panelInputAndOutput_NAA.Controls.Add(panelUserInterface_NAA);
             panelInputAndOutput_NAA.Dock = DockStyle.Top;
             panelInputAndOutput_NAA.Location = new Point(0, 0);
             panelInputAndOutput_NAA.Name = "panelInputAndOutput_NAA";
             panelInputAndOutput_NAA.Padding = new Padding(10);
-            panelInputAndOutput_NAA.Size = new Size(1123, 166);
+            panelInputAndOutput_NAA.Size = new Size(1142, 289);
             panelInputAndOutput_NAA.TabIndex = 1;
             // 
-            // splitter4
+            // panelUserInterface_NAA
             // 
-            splitter4.Location = new Point(604, 10);
-            splitter4.Name = "splitter4";
-            splitter4.Size = new Size(4, 146);
-            splitter4.TabIndex = 4;
-            splitter4.TabStop = false;
+            panelUserInterface_NAA.Controls.Add(panelAddAndRemove_NAA);
+            panelUserInterface_NAA.Controls.Add(panelSearchAndDatabase_NAA);
+            panelUserInterface_NAA.Dock = DockStyle.Fill;
+            panelUserInterface_NAA.Location = new Point(10, 10);
+            panelUserInterface_NAA.Name = "panelUserInterface_NAA";
+            panelUserInterface_NAA.Padding = new Padding(10);
+            panelUserInterface_NAA.Size = new Size(1122, 269);
+            panelUserInterface_NAA.TabIndex = 3;
             // 
-            // panelOutput_NAA
+            // panelAddAndRemove_NAA
             // 
-            panelOutput_NAA.Controls.Add(groupBoxDatabase_NAA);
-            panelOutput_NAA.Dock = DockStyle.Fill;
-            panelOutput_NAA.Location = new Point(604, 10);
-            panelOutput_NAA.Name = "panelOutput_NAA";
-            panelOutput_NAA.Padding = new Padding(10);
-            panelOutput_NAA.Size = new Size(509, 146);
-            panelOutput_NAA.TabIndex = 3;
+            panelAddAndRemove_NAA.Controls.Add(groupBoxRemoveRoute_NAA);
+            panelAddAndRemove_NAA.Controls.Add(groupBoxAddRoute_NAA);
+            panelAddAndRemove_NAA.Dock = DockStyle.Fill;
+            panelAddAndRemove_NAA.Location = new Point(10, 160);
+            panelAddAndRemove_NAA.Name = "panelAddAndRemove_NAA";
+            panelAddAndRemove_NAA.Size = new Size(1102, 99);
+            panelAddAndRemove_NAA.TabIndex = 5;
+            // 
+            // groupBoxRemoveRoute_NAA
+            // 
+            groupBoxRemoveRoute_NAA.Controls.Add(buttonRemoveRoute_NAA);
+            groupBoxRemoveRoute_NAA.Controls.Add(labelRemoveTo_NAA);
+            groupBoxRemoveRoute_NAA.Controls.Add(textBoxRemoveNumber_NAA);
+            groupBoxRemoveRoute_NAA.Controls.Add(textBoxRemoveFrom_NAA);
+            groupBoxRemoveRoute_NAA.Controls.Add(labelRemoveFrom_NAA);
+            groupBoxRemoveRoute_NAA.Controls.Add(textBoxRemoveTo_NAA);
+            groupBoxRemoveRoute_NAA.Controls.Add(labelRemoveNumber_NAA);
+            groupBoxRemoveRoute_NAA.Dock = DockStyle.Fill;
+            groupBoxRemoveRoute_NAA.Location = new Point(572, 0);
+            groupBoxRemoveRoute_NAA.Name = "groupBoxRemoveRoute_NAA";
+            groupBoxRemoveRoute_NAA.Size = new Size(530, 99);
+            groupBoxRemoveRoute_NAA.TabIndex = 1;
+            groupBoxRemoveRoute_NAA.TabStop = false;
+            groupBoxRemoveRoute_NAA.Text = "Удалить маршрут";
+            // 
+            // buttonRemoveRoute_NAA
+            // 
+            buttonRemoveRoute_NAA.Image = (Image)resources.GetObject("buttonRemoveRoute_NAA.Image");
+            buttonRemoveRoute_NAA.Location = new Point(399, 37);
+            buttonRemoveRoute_NAA.Name = "buttonRemoveRoute_NAA";
+            buttonRemoveRoute_NAA.Size = new Size(50, 50);
+            buttonRemoveRoute_NAA.TabIndex = 2;
+            toolTipGeneral.SetToolTip(buttonRemoveRoute_NAA, "Удалить маршрут");
+            buttonRemoveRoute_NAA.UseVisualStyleBackColor = true;
+            buttonRemoveRoute_NAA.Click += buttonRemoveRoute_NAA_Click;
+            // 
+            // labelRemoveTo_NAA
+            // 
+            labelRemoveTo_NAA.AutoSize = true;
+            labelRemoveTo_NAA.Location = new Point(234, 37);
+            labelRemoveTo_NAA.Name = "labelRemoveTo_NAA";
+            labelRemoveTo_NAA.Size = new Size(41, 20);
+            labelRemoveTo_NAA.TabIndex = 1;
+            labelRemoveTo_NAA.Text = "Куда";
+            labelRemoveTo_NAA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // textBoxRemoveNumber_NAA
+            // 
+            textBoxRemoveNumber_NAA.Location = new Point(28, 60);
+            textBoxRemoveNumber_NAA.Name = "textBoxRemoveNumber_NAA";
+            textBoxRemoveNumber_NAA.Size = new Size(70, 27);
+            textBoxRemoveNumber_NAA.TabIndex = 0;
+            // 
+            // textBoxRemoveFrom_NAA
+            // 
+            textBoxRemoveFrom_NAA.Location = new Point(116, 60);
+            textBoxRemoveFrom_NAA.Name = "textBoxRemoveFrom_NAA";
+            textBoxRemoveFrom_NAA.Size = new Size(97, 27);
+            textBoxRemoveFrom_NAA.TabIndex = 0;
+            // 
+            // labelRemoveFrom_NAA
+            // 
+            labelRemoveFrom_NAA.AutoSize = true;
+            labelRemoveFrom_NAA.Location = new Point(116, 37);
+            labelRemoveFrom_NAA.Name = "labelRemoveFrom_NAA";
+            labelRemoveFrom_NAA.Size = new Size(56, 20);
+            labelRemoveFrom_NAA.TabIndex = 1;
+            labelRemoveFrom_NAA.Text = "Откуда";
+            labelRemoveFrom_NAA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // textBoxRemoveTo_NAA
+            // 
+            textBoxRemoveTo_NAA.Location = new Point(234, 60);
+            textBoxRemoveTo_NAA.Name = "textBoxRemoveTo_NAA";
+            textBoxRemoveTo_NAA.Size = new Size(97, 27);
+            textBoxRemoveTo_NAA.TabIndex = 0;
+            // 
+            // labelRemoveNumber_NAA
+            // 
+            labelRemoveNumber_NAA.AutoSize = true;
+            labelRemoveNumber_NAA.Location = new Point(28, 37);
+            labelRemoveNumber_NAA.Name = "labelRemoveNumber_NAA";
+            labelRemoveNumber_NAA.Size = new Size(26, 20);
+            labelRemoveNumber_NAA.TabIndex = 1;
+            labelRemoveNumber_NAA.Text = "№";
+            labelRemoveNumber_NAA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // groupBoxAddRoute_NAA
+            // 
+            groupBoxAddRoute_NAA.Controls.Add(buttonAddRoute_NAA);
+            groupBoxAddRoute_NAA.Controls.Add(labelAddTime_NAA);
+            groupBoxAddRoute_NAA.Controls.Add(labelAddTo_NAA);
+            groupBoxAddRoute_NAA.Controls.Add(labelAddFrom_NAA);
+            groupBoxAddRoute_NAA.Controls.Add(labelAddNumber_NAA);
+            groupBoxAddRoute_NAA.Controls.Add(textBoxAddTime_NAA);
+            groupBoxAddRoute_NAA.Controls.Add(textBoxAddTo_NAA);
+            groupBoxAddRoute_NAA.Controls.Add(textBoxAddFrom_NAA);
+            groupBoxAddRoute_NAA.Controls.Add(textBoxAddNumber_NAA);
+            groupBoxAddRoute_NAA.Dock = DockStyle.Left;
+            groupBoxAddRoute_NAA.Location = new Point(0, 0);
+            groupBoxAddRoute_NAA.Name = "groupBoxAddRoute_NAA";
+            groupBoxAddRoute_NAA.Size = new Size(572, 99);
+            groupBoxAddRoute_NAA.TabIndex = 0;
+            groupBoxAddRoute_NAA.TabStop = false;
+            groupBoxAddRoute_NAA.Text = "Добавить маршрут";
+            // 
+            // buttonAddRoute_NAA
+            // 
+            buttonAddRoute_NAA.Image = (Image)resources.GetObject("buttonAddRoute_NAA.Image");
+            buttonAddRoute_NAA.Location = new Point(467, 37);
+            buttonAddRoute_NAA.Name = "buttonAddRoute_NAA";
+            buttonAddRoute_NAA.Size = new Size(50, 50);
+            buttonAddRoute_NAA.TabIndex = 2;
+            toolTipGeneral.SetToolTip(buttonAddRoute_NAA, "Добавить маршрут");
+            buttonAddRoute_NAA.UseVisualStyleBackColor = true;
+            buttonAddRoute_NAA.Click += buttonAddRoute_NAA_Click;
+            // 
+            // labelAddTime_NAA
+            // 
+            labelAddTime_NAA.AutoSize = true;
+            labelAddTime_NAA.Location = new Point(348, 37);
+            labelAddTime_NAA.Name = "labelAddTime_NAA";
+            labelAddTime_NAA.Size = new Size(100, 20);
+            labelAddTime_NAA.TabIndex = 1;
+            labelAddTime_NAA.Text = "Время (мин.)";
+            labelAddTime_NAA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelAddTo_NAA
+            // 
+            labelAddTo_NAA.AutoSize = true;
+            labelAddTo_NAA.Location = new Point(227, 37);
+            labelAddTo_NAA.Name = "labelAddTo_NAA";
+            labelAddTo_NAA.Size = new Size(41, 20);
+            labelAddTo_NAA.TabIndex = 1;
+            labelAddTo_NAA.Text = "Куда";
+            labelAddTo_NAA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelAddFrom_NAA
+            // 
+            labelAddFrom_NAA.AutoSize = true;
+            labelAddFrom_NAA.Location = new Point(109, 37);
+            labelAddFrom_NAA.Name = "labelAddFrom_NAA";
+            labelAddFrom_NAA.Size = new Size(56, 20);
+            labelAddFrom_NAA.TabIndex = 1;
+            labelAddFrom_NAA.Text = "Откуда";
+            labelAddFrom_NAA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelAddNumber_NAA
+            // 
+            labelAddNumber_NAA.AutoSize = true;
+            labelAddNumber_NAA.Location = new Point(21, 37);
+            labelAddNumber_NAA.Name = "labelAddNumber_NAA";
+            labelAddNumber_NAA.Size = new Size(26, 20);
+            labelAddNumber_NAA.TabIndex = 1;
+            labelAddNumber_NAA.Text = "№";
+            labelAddNumber_NAA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // textBoxAddTime_NAA
+            // 
+            textBoxAddTime_NAA.Location = new Point(348, 60);
+            textBoxAddTime_NAA.Name = "textBoxAddTime_NAA";
+            textBoxAddTime_NAA.Size = new Size(68, 27);
+            textBoxAddTime_NAA.TabIndex = 0;
+            // 
+            // textBoxAddTo_NAA
+            // 
+            textBoxAddTo_NAA.Location = new Point(227, 60);
+            textBoxAddTo_NAA.Name = "textBoxAddTo_NAA";
+            textBoxAddTo_NAA.Size = new Size(97, 27);
+            textBoxAddTo_NAA.TabIndex = 0;
+            // 
+            // textBoxAddFrom_NAA
+            // 
+            textBoxAddFrom_NAA.Location = new Point(109, 60);
+            textBoxAddFrom_NAA.Name = "textBoxAddFrom_NAA";
+            textBoxAddFrom_NAA.Size = new Size(97, 27);
+            textBoxAddFrom_NAA.TabIndex = 0;
+            // 
+            // textBoxAddNumber_NAA
+            // 
+            textBoxAddNumber_NAA.Location = new Point(21, 60);
+            textBoxAddNumber_NAA.Name = "textBoxAddNumber_NAA";
+            textBoxAddNumber_NAA.Size = new Size(70, 27);
+            textBoxAddNumber_NAA.TabIndex = 0;
+            // 
+            // panelSearchAndDatabase_NAA
+            // 
+            panelSearchAndDatabase_NAA.Controls.Add(groupBoxDatabase_NAA);
+            panelSearchAndDatabase_NAA.Controls.Add(groupBoxInput_NAA);
+            panelSearchAndDatabase_NAA.Dock = DockStyle.Top;
+            panelSearchAndDatabase_NAA.Location = new Point(10, 10);
+            panelSearchAndDatabase_NAA.Name = "panelSearchAndDatabase_NAA";
+            panelSearchAndDatabase_NAA.Size = new Size(1102, 150);
+            panelSearchAndDatabase_NAA.TabIndex = 4;
             // 
             // groupBoxDatabase_NAA
             // 
             groupBoxDatabase_NAA.Controls.Add(labelDatabasePath_NAA);
             groupBoxDatabase_NAA.Controls.Add(textBoxDatabaseSource_NAA);
+            groupBoxDatabase_NAA.Controls.Add(buttonSaveDatabaseFile_NAA);
             groupBoxDatabase_NAA.Controls.Add(buttonDatabaseFile_NAA);
             groupBoxDatabase_NAA.Dock = DockStyle.Fill;
-            groupBoxDatabase_NAA.Location = new Point(10, 10);
+            groupBoxDatabase_NAA.Location = new Point(572, 0);
             groupBoxDatabase_NAA.Name = "groupBoxDatabase_NAA";
-            groupBoxDatabase_NAA.Size = new Size(489, 126);
+            groupBoxDatabase_NAA.Size = new Size(530, 150);
             groupBoxDatabase_NAA.TabIndex = 2;
             groupBoxDatabase_NAA.TabStop = false;
             groupBoxDatabase_NAA.Text = "База данных";
@@ -153,59 +367,61 @@
             // 
             // textBoxDatabaseSource_NAA
             // 
-            textBoxDatabaseSource_NAA.Location = new Point(90, 61);
+            textBoxDatabaseSource_NAA.Location = new Point(92, 64);
             textBoxDatabaseSource_NAA.Multiline = true;
             textBoxDatabaseSource_NAA.Name = "textBoxDatabaseSource_NAA";
             textBoxDatabaseSource_NAA.ReadOnly = true;
-            textBoxDatabaseSource_NAA.Size = new Size(388, 54);
+            textBoxDatabaseSource_NAA.Size = new Size(417, 67);
             textBoxDatabaseSource_NAA.TabIndex = 1;
             textBoxDatabaseSource_NAA.Text = "Не выбран";
+            // 
+            // buttonSaveDatabaseFile_NAA
+            // 
+            buttonSaveDatabaseFile_NAA.Image = (Image)resources.GetObject("buttonSaveDatabaseFile_NAA.Image");
+            buttonSaveDatabaseFile_NAA.Location = new Point(31, 84);
+            buttonSaveDatabaseFile_NAA.Name = "buttonSaveDatabaseFile_NAA";
+            buttonSaveDatabaseFile_NAA.Size = new Size(53, 47);
+            buttonSaveDatabaseFile_NAA.TabIndex = 0;
+            toolTipGeneral.SetToolTip(buttonSaveDatabaseFile_NAA, "Сохранить базу данных");
+            buttonSaveDatabaseFile_NAA.UseVisualStyleBackColor = true;
+            buttonSaveDatabaseFile_NAA.Click += buttonSaveDatabaseFile_NAA_Click;
             // 
             // buttonDatabaseFile_NAA
             // 
             buttonDatabaseFile_NAA.Image = (Image)resources.GetObject("buttonDatabaseFile_NAA.Image");
-            buttonDatabaseFile_NAA.Location = new Point(17, 54);
+            buttonDatabaseFile_NAA.Location = new Point(31, 31);
             buttonDatabaseFile_NAA.Name = "buttonDatabaseFile_NAA";
-            buttonDatabaseFile_NAA.Size = new Size(67, 61);
+            buttonDatabaseFile_NAA.Size = new Size(53, 47);
             buttonDatabaseFile_NAA.TabIndex = 0;
+            toolTipGeneral.SetToolTip(buttonDatabaseFile_NAA, "Подключить базу данных");
             buttonDatabaseFile_NAA.UseVisualStyleBackColor = true;
             buttonDatabaseFile_NAA.Click += buttonDatabaseFile_NAA_Click;
             // 
-            // panelInput_NAA
-            // 
-            panelInput_NAA.Controls.Add(groupBoxInput_NAA);
-            panelInput_NAA.Dock = DockStyle.Left;
-            panelInput_NAA.Location = new Point(10, 10);
-            panelInput_NAA.Name = "panelInput_NAA";
-            panelInput_NAA.Padding = new Padding(10);
-            panelInput_NAA.Size = new Size(594, 146);
-            panelInput_NAA.TabIndex = 3;
-            // 
             // groupBoxInput_NAA
             // 
-            groupBoxInput_NAA.Controls.Add(labelFiltration_NAA);
+            groupBoxInput_NAA.Controls.Add(labelSort_NAA);
             groupBoxInput_NAA.Controls.Add(comboBoxSort_NAA);
             groupBoxInput_NAA.Controls.Add(buttonSearch_NAA);
             groupBoxInput_NAA.Controls.Add(labelTo_NAA);
             groupBoxInput_NAA.Controls.Add(labelFrom_NAA);
             groupBoxInput_NAA.Controls.Add(textBoxFromStation_NAA);
             groupBoxInput_NAA.Controls.Add(textBoxToStation_NAA);
-            groupBoxInput_NAA.Dock = DockStyle.Fill;
-            groupBoxInput_NAA.Location = new Point(10, 10);
+            groupBoxInput_NAA.Dock = DockStyle.Left;
+            groupBoxInput_NAA.Location = new Point(0, 0);
             groupBoxInput_NAA.Name = "groupBoxInput_NAA";
-            groupBoxInput_NAA.Size = new Size(574, 126);
+            groupBoxInput_NAA.Size = new Size(572, 150);
             groupBoxInput_NAA.TabIndex = 1;
             groupBoxInput_NAA.TabStop = false;
-            groupBoxInput_NAA.Text = "Входные данные";
+            groupBoxInput_NAA.Text = "Поиск маршрута";
             // 
-            // labelFiltration_NAA
+            // labelSort_NAA
             // 
-            labelFiltration_NAA.AutoSize = true;
-            labelFiltration_NAA.Location = new Point(328, 33);
-            labelFiltration_NAA.Name = "labelFiltration_NAA";
-            labelFiltration_NAA.Size = new Size(94, 20);
-            labelFiltration_NAA.TabIndex = 4;
-            labelFiltration_NAA.Text = "Фильтрация";
+            labelSort_NAA.AutoSize = true;
+            labelSort_NAA.Location = new Point(328, 33);
+            labelSort_NAA.Name = "labelSort_NAA";
+            labelSort_NAA.Size = new Size(92, 20);
+            labelSort_NAA.TabIndex = 4;
+            labelSort_NAA.Text = "Сортировка";
             // 
             // comboBoxSort_NAA
             // 
@@ -217,6 +433,7 @@
             comboBoxSort_NAA.Name = "comboBoxSort_NAA";
             comboBoxSort_NAA.Size = new Size(151, 28);
             comboBoxSort_NAA.TabIndex = 3;
+            toolTipGeneral.SetToolTip(comboBoxSort_NAA, "Параметр фильтра");
             // 
             // buttonSearch_NAA
             // 
@@ -225,6 +442,7 @@
             buttonSearch_NAA.Name = "buttonSearch_NAA";
             buttonSearch_NAA.Size = new Size(45, 42);
             buttonSearch_NAA.TabIndex = 2;
+            toolTipGeneral.SetToolTip(buttonSearch_NAA, "Найти маршруты");
             buttonSearch_NAA.UseVisualStyleBackColor = true;
             buttonSearch_NAA.Click += buttonSearch_NAA_Click;
             // 
@@ -252,7 +470,7 @@
             groupBoxInputTable_NAA.Dock = DockStyle.Top;
             groupBoxInputTable_NAA.Location = new Point(10, 10);
             groupBoxInputTable_NAA.Name = "groupBoxInputTable_NAA";
-            groupBoxInputTable_NAA.Size = new Size(551, 231);
+            groupBoxInputTable_NAA.Size = new Size(551, 337);
             groupBoxInputTable_NAA.TabIndex = 0;
             groupBoxInputTable_NAA.TabStop = false;
             groupBoxInputTable_NAA.Text = "Все маршруты";
@@ -266,7 +484,7 @@
             dataGridViewAllRoutes_NAA.Name = "dataGridViewAllRoutes_NAA";
             dataGridViewAllRoutes_NAA.RowHeadersVisible = false;
             dataGridViewAllRoutes_NAA.RowHeadersWidth = 51;
-            dataGridViewAllRoutes_NAA.Size = new Size(545, 205);
+            dataGridViewAllRoutes_NAA.Size = new Size(545, 311);
             dataGridViewAllRoutes_NAA.TabIndex = 0;
             // 
             // openFileDialogRoutes
@@ -276,9 +494,9 @@
             // splitter1
             // 
             splitter1.Dock = DockStyle.Top;
-            splitter1.Location = new Point(0, 166);
+            splitter1.Location = new Point(0, 289);
             splitter1.Name = "splitter1";
-            splitter1.Size = new Size(1123, 4);
+            splitter1.Size = new Size(1142, 4);
             splitter1.TabIndex = 8;
             splitter1.TabStop = false;
             // 
@@ -288,9 +506,9 @@
             panelDataGridViewsAndCharts_NAA.Controls.Add(splitter2);
             panelDataGridViewsAndCharts_NAA.Controls.Add(panelDataGridViews_NAA);
             panelDataGridViewsAndCharts_NAA.Dock = DockStyle.Fill;
-            panelDataGridViewsAndCharts_NAA.Location = new Point(0, 170);
+            panelDataGridViewsAndCharts_NAA.Location = new Point(0, 293);
             panelDataGridViewsAndCharts_NAA.Name = "panelDataGridViewsAndCharts_NAA";
-            panelDataGridViewsAndCharts_NAA.Size = new Size(1123, 600);
+            panelDataGridViewsAndCharts_NAA.Size = new Size(1142, 739);
             panelDataGridViewsAndCharts_NAA.TabIndex = 9;
             // 
             // panelCharts_NAA
@@ -302,16 +520,16 @@
             panelCharts_NAA.Location = new Point(575, 0);
             panelCharts_NAA.Name = "panelCharts_NAA";
             panelCharts_NAA.Padding = new Padding(10);
-            panelCharts_NAA.Size = new Size(548, 600);
+            panelCharts_NAA.Size = new Size(567, 739);
             panelCharts_NAA.TabIndex = 2;
             // 
             // groupBoxToChart_NAA
             // 
             groupBoxToChart_NAA.Controls.Add(chartToStation_NAA);
             groupBoxToChart_NAA.Dock = DockStyle.Fill;
-            groupBoxToChart_NAA.Location = new Point(10, 245);
+            groupBoxToChart_NAA.Location = new Point(10, 351);
             groupBoxToChart_NAA.Name = "groupBoxToChart_NAA";
-            groupBoxToChart_NAA.Size = new Size(528, 345);
+            groupBoxToChart_NAA.Size = new Size(547, 378);
             groupBoxToChart_NAA.TabIndex = 2;
             groupBoxToChart_NAA.TabStop = false;
             groupBoxToChart_NAA.Text = "Маршруты до остановки";
@@ -332,16 +550,16 @@
             series1.Name = "Series1";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartToStation_NAA.Series.Add(series1);
-            chartToStation_NAA.Size = new Size(522, 319);
+            chartToStation_NAA.Size = new Size(541, 352);
             chartToStation_NAA.TabIndex = 0;
             chartToStation_NAA.Text = "chart2";
             // 
             // splitter5
             // 
             splitter5.Dock = DockStyle.Top;
-            splitter5.Location = new Point(10, 241);
+            splitter5.Location = new Point(10, 347);
             splitter5.Name = "splitter5";
-            splitter5.Size = new Size(528, 4);
+            splitter5.Size = new Size(547, 4);
             splitter5.TabIndex = 1;
             splitter5.TabStop = false;
             // 
@@ -351,7 +569,7 @@
             groupBoxFromChart_NAA.Dock = DockStyle.Top;
             groupBoxFromChart_NAA.Location = new Point(10, 10);
             groupBoxFromChart_NAA.Name = "groupBoxFromChart_NAA";
-            groupBoxFromChart_NAA.Size = new Size(528, 231);
+            groupBoxFromChart_NAA.Size = new Size(547, 337);
             groupBoxFromChart_NAA.TabIndex = 0;
             groupBoxFromChart_NAA.TabStop = false;
             groupBoxFromChart_NAA.Text = "Маршруты от остановки";
@@ -373,7 +591,7 @@
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             series2.YValuesPerPoint = 2;
             chartFromStation_NAA.Series.Add(series2);
-            chartFromStation_NAA.Size = new Size(522, 205);
+            chartFromStation_NAA.Size = new Size(541, 311);
             chartFromStation_NAA.TabIndex = 0;
             chartFromStation_NAA.Text = "chart1";
             // 
@@ -381,7 +599,7 @@
             // 
             splitter2.Location = new Point(571, 0);
             splitter2.Name = "splitter2";
-            splitter2.Size = new Size(4, 600);
+            splitter2.Size = new Size(4, 739);
             splitter2.TabIndex = 1;
             splitter2.TabStop = false;
             // 
@@ -394,16 +612,16 @@
             panelDataGridViews_NAA.Location = new Point(0, 0);
             panelDataGridViews_NAA.Name = "panelDataGridViews_NAA";
             panelDataGridViews_NAA.Padding = new Padding(10);
-            panelDataGridViews_NAA.Size = new Size(571, 600);
+            panelDataGridViews_NAA.Size = new Size(571, 739);
             panelDataGridViews_NAA.TabIndex = 0;
             // 
             // groupBoxOutputTable_NAA
             // 
             groupBoxOutputTable_NAA.Controls.Add(dataGridViewFilteredRoutes_NAA);
             groupBoxOutputTable_NAA.Dock = DockStyle.Fill;
-            groupBoxOutputTable_NAA.Location = new Point(10, 245);
+            groupBoxOutputTable_NAA.Location = new Point(10, 351);
             groupBoxOutputTable_NAA.Name = "groupBoxOutputTable_NAA";
-            groupBoxOutputTable_NAA.Size = new Size(551, 345);
+            groupBoxOutputTable_NAA.Size = new Size(551, 378);
             groupBoxOutputTable_NAA.TabIndex = 3;
             groupBoxOutputTable_NAA.TabStop = false;
             groupBoxOutputTable_NAA.Text = "Подходящие маршруты";
@@ -417,34 +635,44 @@
             dataGridViewFilteredRoutes_NAA.Name = "dataGridViewFilteredRoutes_NAA";
             dataGridViewFilteredRoutes_NAA.RowHeadersVisible = false;
             dataGridViewFilteredRoutes_NAA.RowHeadersWidth = 51;
-            dataGridViewFilteredRoutes_NAA.Size = new Size(545, 319);
+            dataGridViewFilteredRoutes_NAA.Size = new Size(545, 352);
             dataGridViewFilteredRoutes_NAA.TabIndex = 0;
             // 
             // splitter3
             // 
             splitter3.Dock = DockStyle.Top;
-            splitter3.Location = new Point(10, 241);
+            splitter3.Location = new Point(10, 347);
             splitter3.Name = "splitter3";
             splitter3.Size = new Size(551, 4);
             splitter3.TabIndex = 2;
             splitter3.TabStop = false;
             // 
+            // toolTipGeneral
+            // 
+            toolTipGeneral.ToolTipIcon = ToolTipIcon.Info;
+            toolTipGeneral.ToolTipTitle = "Подсказка";
+            // 
             // FormGeneral
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1123, 770);
+            ClientSize = new Size(1142, 1032);
             Controls.Add(panelDataGridViewsAndCharts_NAA);
             Controls.Add(splitter1);
             Controls.Add(panelInputAndOutput_NAA);
-            MinimumSize = new Size(1141, 817);
+            MinimumSize = new Size(1160, 1079);
             Name = "FormGeneral";
-            Text = "FormGeneral";
+            Text = "Основная программа";
             panelInputAndOutput_NAA.ResumeLayout(false);
-            panelOutput_NAA.ResumeLayout(false);
+            panelUserInterface_NAA.ResumeLayout(false);
+            panelAddAndRemove_NAA.ResumeLayout(false);
+            groupBoxRemoveRoute_NAA.ResumeLayout(false);
+            groupBoxRemoveRoute_NAA.PerformLayout();
+            groupBoxAddRoute_NAA.ResumeLayout(false);
+            groupBoxAddRoute_NAA.PerformLayout();
+            panelSearchAndDatabase_NAA.ResumeLayout(false);
             groupBoxDatabase_NAA.ResumeLayout(false);
             groupBoxDatabase_NAA.PerformLayout();
-            panelInput_NAA.ResumeLayout(false);
             groupBoxInput_NAA.ResumeLayout(false);
             groupBoxInput_NAA.PerformLayout();
             groupBoxInputTable_NAA.ResumeLayout(false);
@@ -477,8 +705,7 @@
         private GroupBox groupBoxInputTable_NAA;
         private Panel panelInput_NAA;
         private Splitter splitter1;
-        private Panel panelOutput_NAA;
-        private Splitter splitter4;
+        private Panel panelUserInterface_NAA;
         private Panel panelDataGridViewsAndCharts_NAA;
         private Panel panelCharts_NAA;
         private Splitter splitter2;
@@ -494,6 +721,29 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartFromStation_NAA;
         private Button buttonSearch_NAA;
         private ComboBox comboBoxSort_NAA;
-        private Label labelFiltration_NAA;
+        private Label labelSort_NAA;
+        private ToolTip toolTipGeneral;
+        private Panel panelSearchAndDatabase_NAA;
+        private Panel panelAddAndRemove_NAA;
+        private GroupBox groupBoxRemoveRoute_NAA;
+        private GroupBox groupBoxAddRoute_NAA;
+        private Button buttonSaveDatabaseFile_NAA;
+        private TextBox textBoxAddTime_NAA;
+        private TextBox textBoxAddTo_NAA;
+        private TextBox textBoxAddFrom_NAA;
+        private TextBox textBoxAddNumber_NAA;
+        private Label labelAddTime_NAA;
+        private Label labelAddTo_NAA;
+        private Label labelAddFrom_NAA;
+        private Label labelAddNumber_NAA;
+        private Button buttonRemoveRoute_NAA;
+        private Label labelRemoveTo_NAA;
+        private TextBox textBoxRemoveNumber_NAA;
+        private TextBox textBoxRemoveFrom_NAA;
+        private Label labelRemoveFrom_NAA;
+        private TextBox textBoxRemoveTo_NAA;
+        private Label labelRemoveNumber_NAA;
+        private Button buttonAddRoute_NAA;
+        private SaveFileDialog saveFileDialogRoutes;
     }
 }

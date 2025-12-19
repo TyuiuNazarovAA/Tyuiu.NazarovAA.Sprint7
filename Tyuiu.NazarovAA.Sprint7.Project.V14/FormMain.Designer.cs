@@ -28,102 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             buttonGeneralForm_NAA = new Button();
             buttonHelp_NAA = new Button();
             buttonAuthorInfo_NAA = new Button();
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
-            splitContainer1 = new SplitContainer();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
+            pictureBoxMain_NAA = new PictureBox();
+            labelTitle_NAA = new Label();
+            toolTipMain = new ToolTip(components);
+            panelButtons_NAA = new Panel();
+            panelContent_NAA = new Panel();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMain_NAA).BeginInit();
+            panelButtons_NAA.SuspendLayout();
+            panelContent_NAA.SuspendLayout();
             SuspendLayout();
             // 
             // buttonGeneralForm_NAA
             // 
             buttonGeneralForm_NAA.Image = (Image)resources.GetObject("buttonGeneralForm_NAA.Image");
-            buttonGeneralForm_NAA.Location = new Point(22, 27);
+            buttonGeneralForm_NAA.Location = new Point(21, 24);
             buttonGeneralForm_NAA.Name = "buttonGeneralForm_NAA";
             buttonGeneralForm_NAA.Size = new Size(107, 55);
             buttonGeneralForm_NAA.TabIndex = 0;
+            toolTipMain.SetToolTip(buttonGeneralForm_NAA, "Запустить программу");
             buttonGeneralForm_NAA.UseVisualStyleBackColor = true;
             buttonGeneralForm_NAA.Click += buttonGeneralForm_NAA_Click;
             // 
             // buttonHelp_NAA
             // 
             buttonHelp_NAA.Image = (Image)resources.GetObject("buttonHelp_NAA.Image");
-            buttonHelp_NAA.Location = new Point(22, 135);
+            buttonHelp_NAA.Location = new Point(21, 122);
             buttonHelp_NAA.Name = "buttonHelp_NAA";
             buttonHelp_NAA.Size = new Size(107, 55);
             buttonHelp_NAA.TabIndex = 0;
+            toolTipMain.SetToolTip(buttonHelp_NAA, "Информация о программе");
             buttonHelp_NAA.UseVisualStyleBackColor = true;
+            buttonHelp_NAA.Click += buttonHelp_NAA_Click;
             // 
             // buttonAuthorInfo_NAA
             // 
             buttonAuthorInfo_NAA.Image = (Image)resources.GetObject("buttonAuthorInfo_NAA.Image");
-            buttonAuthorInfo_NAA.Location = new Point(22, 244);
+            buttonAuthorInfo_NAA.Location = new Point(21, 226);
             buttonAuthorInfo_NAA.Name = "buttonAuthorInfo_NAA";
             buttonAuthorInfo_NAA.Size = new Size(107, 55);
             buttonAuthorInfo_NAA.TabIndex = 0;
+            toolTipMain.SetToolTip(buttonAuthorInfo_NAA, "Информация об авторе");
             buttonAuthorInfo_NAA.UseVisualStyleBackColor = true;
+            buttonAuthorInfo_NAA.Click += buttonAuthorInfo_NAA_Click;
             // 
-            // pictureBox1
+            // pictureBoxMain_NAA
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(35, 104);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(477, 202);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            pictureBoxMain_NAA.Image = (Image)resources.GetObject("pictureBoxMain_NAA.Image");
+            pictureBoxMain_NAA.Location = new Point(19, 90);
+            pictureBoxMain_NAA.Name = "pictureBoxMain_NAA";
+            pictureBoxMain_NAA.Size = new Size(477, 202);
+            pictureBoxMain_NAA.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxMain_NAA.TabIndex = 1;
+            pictureBoxMain_NAA.TabStop = false;
             // 
-            // label1
+            // labelTitle_NAA
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F);
-            label1.Location = new Point(63, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(416, 46);
-            label1.TabIndex = 2;
-            label1.Text = "Управление маршрутами";
+            labelTitle_NAA.AutoSize = true;
+            labelTitle_NAA.Font = new Font("Segoe UI", 16F);
+            labelTitle_NAA.Location = new Point(19, 27);
+            labelTitle_NAA.Name = "labelTitle_NAA";
+            labelTitle_NAA.Size = new Size(441, 37);
+            labelTitle_NAA.TabIndex = 2;
+            labelTitle_NAA.Text = "Система управления маршрутами";
             // 
-            // splitContainer1
+            // toolTipMain
             // 
-            splitContainer1.Location = new Point(1, 3);
-            splitContainer1.Name = "splitContainer1";
+            toolTipMain.ToolTipIcon = ToolTipIcon.Info;
+            toolTipMain.ToolTipTitle = "Подсказка";
             // 
-            // splitContainer1.Panel1
+            // panelButtons_NAA
             // 
-            splitContainer1.Panel1.Controls.Add(buttonGeneralForm_NAA);
-            splitContainer1.Panel1.Controls.Add(buttonHelp_NAA);
-            splitContainer1.Panel1.Controls.Add(buttonAuthorInfo_NAA);
+            panelButtons_NAA.BackColor = SystemColors.ControlLight;
+            panelButtons_NAA.Controls.Add(buttonGeneralForm_NAA);
+            panelButtons_NAA.Controls.Add(buttonHelp_NAA);
+            panelButtons_NAA.Controls.Add(buttonAuthorInfo_NAA);
+            panelButtons_NAA.Location = new Point(12, 12);
+            panelButtons_NAA.Name = "panelButtons_NAA";
+            panelButtons_NAA.Size = new Size(149, 310);
+            panelButtons_NAA.TabIndex = 3;
             // 
-            // splitContainer1.Panel2
+            // panelContent_NAA
             // 
-            splitContainer1.Panel2.Controls.Add(pictureBox1);
-            splitContainer1.Panel2.Controls.Add(label1);
-            splitContainer1.Size = new Size(696, 332);
-            splitContainer1.SplitterDistance = 157;
-            splitContainer1.TabIndex = 3;
+            panelContent_NAA.BackColor = SystemColors.ControlLight;
+            panelContent_NAA.Controls.Add(labelTitle_NAA);
+            panelContent_NAA.Controls.Add(pictureBoxMain_NAA);
+            panelContent_NAA.Location = new Point(167, 12);
+            panelContent_NAA.Name = "panelContent_NAA";
+            panelContent_NAA.Size = new Size(516, 310);
+            panelContent_NAA.TabIndex = 4;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(695, 334);
-            Controls.Add(splitContainer1);
+            Controls.Add(panelContent_NAA);
+            Controls.Add(panelButtons_NAA);
             MaximumSize = new Size(713, 381);
+            MinimumSize = new Size(713, 381);
             Name = "FormMain";
-            Text = "FormMain";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
+            Text = "Главное меню";
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMain_NAA).EndInit();
+            panelButtons_NAA.ResumeLayout(false);
+            panelContent_NAA.ResumeLayout(false);
+            panelContent_NAA.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -132,8 +145,10 @@
         private Button buttonGeneralForm_NAA;
         private Button buttonHelp_NAA;
         private Button buttonAuthorInfo_NAA;
-        private PictureBox pictureBox1;
-        private Label label1;
-        private SplitContainer splitContainer1;
+        private PictureBox pictureBoxMain_NAA;
+        private Label labelTitle_NAA;
+        private ToolTip toolTipMain;
+        private Panel panelButtons_NAA;
+        private Panel panelContent_NAA;
     }
 }
