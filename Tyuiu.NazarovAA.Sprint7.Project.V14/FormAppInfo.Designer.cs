@@ -35,8 +35,9 @@
             labelTitle1_NAA = new Label();
             labelTitle_NAA = new Label();
             panelGuide2_NAA = new Panel();
-            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
             pictureBox2 = new PictureBox();
+            label1 = new Label();
             labelTitle2_NAA = new Label();
             buttonNextPage_NAA = new Button();
             buttonClose_NAA = new Button();
@@ -44,7 +45,7 @@
             panelGuide1_NAA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelGuide2_NAA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -55,15 +56,15 @@
             panelGuide1_NAA.Controls.Add(labelTitle1_NAA);
             panelGuide1_NAA.Location = new Point(12, 72);
             panelGuide1_NAA.Name = "panelGuide1_NAA";
-            panelGuide1_NAA.Size = new Size(600, 511);
+            panelGuide1_NAA.Size = new Size(539, 511);
             panelGuide1_NAA.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(26, 71);
+            pictureBox1.Location = new Point(3, 71);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(566, 409);
+            pictureBox1.Size = new Size(523, 383);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -91,33 +92,44 @@
             // panelGuide2_NAA
             // 
             panelGuide2_NAA.BackColor = SystemColors.ControlLight;
-            panelGuide2_NAA.Controls.Add(pictureBox3);
+            panelGuide2_NAA.Controls.Add(pictureBox4);
             panelGuide2_NAA.Controls.Add(pictureBox2);
+            panelGuide2_NAA.Controls.Add(label1);
             panelGuide2_NAA.Controls.Add(labelTitle2_NAA);
-            panelGuide2_NAA.Location = new Point(632, 72);
+            panelGuide2_NAA.Location = new Point(571, 72);
             panelGuide2_NAA.Name = "panelGuide2_NAA";
-            panelGuide2_NAA.Size = new Size(517, 511);
+            panelGuide2_NAA.Size = new Size(563, 511);
             panelGuide2_NAA.TabIndex = 0;
             // 
-            // pictureBox3
+            // pictureBox4
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(26, 212);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(472, 208);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(13, 203);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(547, 283);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 1;
+            pictureBox4.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(26, 56);
+            pictureBox2.Location = new Point(50, 54);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(454, 113);
+            pictureBox2.Size = new Size(424, 98);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(26, 163);
+            label1.Name = "label1";
+            label1.Size = new Size(198, 25);
+            label1.TabIndex = 0;
+            label1.Text = "3. Сохраняем данные";
             // 
             // labelTitle2_NAA
             // 
@@ -131,7 +143,7 @@
             // 
             // buttonNextPage_NAA
             // 
-            buttonNextPage_NAA.Location = new Point(940, 608);
+            buttonNextPage_NAA.Location = new Point(937, 606);
             buttonNextPage_NAA.Name = "buttonNextPage_NAA";
             buttonNextPage_NAA.Size = new Size(94, 29);
             buttonNextPage_NAA.TabIndex = 1;
@@ -142,7 +154,7 @@
             // 
             // buttonClose_NAA
             // 
-            buttonClose_NAA.Location = new Point(1040, 608);
+            buttonClose_NAA.Location = new Point(1037, 606);
             buttonClose_NAA.Name = "buttonClose_NAA";
             buttonClose_NAA.Size = new Size(94, 29);
             buttonClose_NAA.TabIndex = 1;
@@ -175,7 +187,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelGuide2_NAA.ResumeLayout(false);
             panelGuide2_NAA.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -190,9 +202,10 @@
         private Panel panelGuide2_NAA;
         private PictureBox pictureBox2;
         private Label labelTitle2_NAA;
-        private PictureBox pictureBox3;
         private Button buttonNextPage_NAA;
         private Button buttonClose_NAA;
         private ToolTip toolTipGuide;
+        private PictureBox pictureBox4;
+        private Label label1;
     }
 }

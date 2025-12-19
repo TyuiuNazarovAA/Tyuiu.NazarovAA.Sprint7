@@ -27,6 +27,7 @@ namespace Tyuiu.NazarovAA.Sprint7.Project.V14
         string databaseRoutesPath;
         private List<CityRoute> cityRoutesFiltered;
         private List<CityRoute> cityRoutesAll;
+        private DataService ds = new DataService();
 
         private void SetupSearchAutoComplete()
         {
@@ -146,13 +147,7 @@ namespace Tyuiu.NazarovAA.Sprint7.Project.V14
         {
             chartFromStation_NAA.Series[0].Points.Clear();
 
-            List<(string, int)> stationNamesAndFromCount = cityRoutesAll
-                .Select(r => r.FromStation)
-                .Distinct()
-                .Select(i => (i, cityRoutesAll
-                    .Count(r => r.FromStation == i)))
-                .OrderByDescending(r => r.Item2)
-                .ToList();
+            List<(string, int)> stationNamesAndFromCount = ds.GetStationNamesAndFromCount(cityRoutesAll);
 
             for (int i = 0; i < stationNamesAndFromCount.Count; i++)
             {
@@ -164,13 +159,7 @@ namespace Tyuiu.NazarovAA.Sprint7.Project.V14
         {
             chartToStation_NAA.Series[0].Points.Clear();
 
-            List<(string, int)> stationNamesAndToCount = cityRoutesAll
-                .Select(r => r.ToStation)
-                .Distinct()
-                .Select(i => (i, cityRoutesAll
-                    .Count(r => r.ToStation == i)))
-                .OrderByDescending(r => r.Item2)
-                .ToList();
+            List<(string, int)> stationNamesAndToCount = ds.GetStationNamesAndToCount(cityRoutesAll);
 
             for (int i = 0; i < stationNamesAndToCount.Count; i++)
             {
@@ -217,7 +206,11 @@ namespace Tyuiu.NazarovAA.Sprint7.Project.V14
             }
 
             if (filteredCityRoutes.Count == 0)
+            {
+                dataGridViewFilteredRoutes_NAA.Rows.Clear();
+                dataGridViewFilteredRoutes_NAA.Columns.Clear();
                 return;
+            }
 
             FillFilteredDataGridView(filteredCityRoutes);
         }
@@ -247,37 +240,14 @@ namespace Tyuiu.NazarovAA.Sprint7.Project.V14
 
         private List<CityRoute> GetSortedCityRoutes()
         {
-            string filterCondition = comboBoxSort_NAA.Text;
+            string sortCondition = comboBoxSort_NAA.Text;
 
-            List<CityRoute> filteredCityRoutes;
+            string from = textBoxFromStation_NAA.Text;
+            string to = textBoxToStation_NAA.Text;
 
-            switch (filterCondition)
-            {
-                case "Нет":
-                    filteredCityRoutes = cityRoutesAll
-                        .Where(r => r.FromStation == textBoxFromStation_NAA.Text &&
-                            r.ToStation == textBoxToStation_NAA.Text)
-                        .ToList();
-                    break;
-                case "Быстрее":
-                    filteredCityRoutes = cityRoutesAll
-                        .Where(r => r.FromStation == textBoxFromStation_NAA.Text &&
-                            r.ToStation == textBoxToStation_NAA.Text)
-                        .OrderBy(r => r.Minutes)
-                        .ToList();
-                    break;
-                case "Медленнее":
-                    filteredCityRoutes = cityRoutesAll
-                        .Where(r => r.FromStation == textBoxFromStation_NAA.Text &&
-                            r.ToStation == textBoxToStation_NAA.Text)
-                        .OrderByDescending(r => r.Minutes)
-                        .ToList();
-                    break;
-                default:
-                    return null;
-            }
+            List<CityRoute> sortedCityRoutes = ds.GetSortedCityRoutes(cityRoutesAll, from, to, sortCondition);
 
-            return filteredCityRoutes;
+            return sortedCityRoutes;
         }
 
         private void FillFilteredDataGridView(List<CityRoute> filteredCityRoutes)

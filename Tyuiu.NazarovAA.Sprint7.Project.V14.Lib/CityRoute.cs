@@ -19,5 +19,23 @@ namespace Tyuiu.NazarovAA.Sprint7.Project.V14.Lib
             ToStation = toStation;
             Minutes = minutes;
         }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is not CityRoute route)
+            {
+                return false;
+            }
+
+            if (route.BusNumber == BusNumber &&
+                route.FromStation == FromStation &&
+                route.ToStation == ToStation &&
+                route.Minutes == Minutes)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
